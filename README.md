@@ -33,5 +33,5 @@ Set-Item WSMan:\localhost\Client\TrustedHosts * -Force\
 6. 実行確認
 
 ## 新システムの導入方法　Mac
-1. PowerShellをダウンロードする。
+1. PowerShellを[ダウンロード](https://learn.microsoft.com/ja-jp/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.2)する。
 2. 以降はWindowsと同様
