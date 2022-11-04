@@ -21,21 +21,17 @@ Windowsの標準機能であるPowerShellを用いてPLASMAMED-DESK(共有PC)に
 - スクリプトをダウンロードする必要がある。
 - Windowsのセキュリティアップロードなどに対して対応の必要性が今後出てくる可能性がある。
 
-## 新システムの導入方法
-1. 必要なスクリプトの[ダウンロード ](https://notepm.jp)\(rds.bat,rds.ps1)
-2. スクリプトの実行許可
-リモートデスクトップに接続しているPC名の確認方法
-資格情報の登録
-Windows：　コントロールパネルから資格情報を登録する　この時のPC名が後のコマンドのPC名になる
-Mac:　調査中
+## 新システムの導入方法　Windows
+1. 必要なスクリプトの[ダウンロード ](https://github.com/plasma-med-ocu/RDS/archive/refs/heads/main.zip)\(rds.bat,rds.ps1)
+2. スクリプトの実行許可 ps1ファイルのプロパティから変更 (場合によってはPowerShellの設定を変更する必要がある)
+3. 資格情報の登録　コントロールパネルから資格情報を登録する　PC名:PLASMAMED-DESK　ユーザー名:PLASMA-remote　パスワードを入力
+4. コマンド入力の為の環境構築\
+Set-ExecutionPolicy RemoteSigned -Force\
+winrm quickconfig -force\
+Set-Item WSMan:\localhost\Client\TrustedHosts * -Force\
+5. rds.bat内のPathを各自の環境に合わせて調整
+6. 実行確認
 
-コマンド入力の為の環境構築
-Windows:
-Set-ExecutionPolicy RemoteSigned -Force
-winrm quickconfig -force
-Set-Item WSMan:\localhost\Client\TrustedHosts * -Force
-
-Mac：
-調査中
-
-コマンドの送信
+## 新システムの導入方法　Mac
+1. PowerShellをダウンロードする。
+2. 以降はWindowsと同様
