@@ -29,7 +29,7 @@ Windowsの標準機能であるPowerShellを用いてPLASMAMED-DESK(共有PC)に
 Set-ExecutionPolicy RemoteSigned -Force\
 winrm quickconfig -force\
 Set-Item WSMan:\localhost\Client\TrustedHosts * -Force\
-5. rds.bat内のPathを各自の環境に合わせて調整
+5. rds.bat内のPathを各自の環境に合わせて調整
 6. 実行確認
 
 ## 新システムの導入方法　Mac
